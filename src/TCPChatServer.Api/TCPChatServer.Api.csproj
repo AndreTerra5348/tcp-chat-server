@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="4.2.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.3.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TCPChatServer.Service\TCPChatServer.Service.csproj" />
+    <ProjectReference Include="..\TCPChatServer.Core\TCPChatServer.Core.csproj" />
+    <ProjectReference Include="..\TCPChatServer.Data\TCPChatServer.Data.csproj" />
+    <ProjectReference Include="..\TCPChatServer.Command\TCPChatServer.Command.csproj" />
+    <ProjectReference Include="..\TCPChatServer.Core.Command\TCPChatServer.Core.Command.csproj" />
+  </ItemGroup>
+  
+</Project>
