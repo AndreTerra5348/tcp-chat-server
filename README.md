@@ -2,8 +2,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&labelColor=blue")](https://www.linkedin.com/in/andr%C3%A9-terra-2a7728145/)
 
+![](https://github.com/AndreTerra5348/tcp-chat-server/actions/workflows/ci.yml/badge.svg)
+
 ## Introduction
-A Worker-Service TCP chat server written with .Net 6.0, using mvc approach, dependency injection, Serilog and FluentValidation
+A Worker-Service TCP chat server written with .Net 6.0, using mvc approach, sockets, dependency injection, Serilog and FluentValidation
 
 ## Project Breakdown:
 - ### Core
