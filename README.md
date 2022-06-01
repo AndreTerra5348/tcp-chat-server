@@ -37,13 +37,13 @@ A Worker-Service TCP chat server written in C# with .Net 6.0, using mvc approach
     - Entry Point
 
 ### Projects Dependency Diagram
-<img src="docs\diagrams-img\project-dependency.svg" alt="project-dependency" width="80%">
+<img src="docs\diagrams-img\project-dependency.svg" alt="project-dependency" width="100%">
 
 ### Core Project Diagram
-<img src="docs\diagrams-img\core-project.svg" alt="core-project" width="80%">
+<img src="docs\diagrams-img\core-project.svg" alt="core-project" width="100%">
 
 ### Data Project Diagram
-<img src="docs\diagrams-img\data-project.svg" alt="data-project" width="80%">
+<img src="docs\diagrams-img\data-project.svg" alt="data-project" width="100%">
 
 
 ## TODO
