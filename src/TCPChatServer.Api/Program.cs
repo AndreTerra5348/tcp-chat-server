@@ -33,7 +33,7 @@ try
     {
         services.AddHostedService<EntryPoint>();
 
-        services.AddTransient<ITcpListenerProvider, TcpListenerProvider>();
+        services.AddTransient<ITCPListenerProvider, TcpListenerProvider>();
 
         services.AddSingleton<IConnectionService, ConnectionService>();
 

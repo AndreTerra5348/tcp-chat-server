@@ -11,9 +11,9 @@ public class ConnectionService : IConnectionService
     private readonly TcpListener _listener;
     private readonly ILogger<ConnectionService> _logger;
 
-    public EventHandler<TcpClientEventArgs>? ClientConnected { get; set; }
+    public EventHandler<ClientEventArgs>? ClientConnected { get; set; }
 
-    public ConnectionService(ITcpListenerProvider tcpListenerProvider, ILogger<ConnectionService> logger)
+    public ConnectionService(ITCPListenerProvider tcpListenerProvider, ILogger<ConnectionService> logger)
     {
         _listener = tcpListenerProvider.CreateTcpListener();
         _listener.Start();
@@ -33,7 +33,7 @@ public class ConnectionService : IConnectionService
                 var handler = ClientConnected;
                 if (handler != null)
                 {
-                    handler(this, new TcpClientEventArgs(tcpClient));
+                    handler(this, new ClientEventArgs(tcpClient));
                 }
             }
             catch (SocketException ex) when (ex.SocketErrorCode == SocketError.Interrupted)

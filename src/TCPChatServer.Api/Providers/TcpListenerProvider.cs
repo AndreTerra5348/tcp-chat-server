@@ -4,7 +4,7 @@ using TCPChatServer.Core.Providers;
 
 namespace TCPChatServer.Api.Providers;
 
-public class TcpListenerProvider : ITcpListenerProvider
+public class TcpListenerProvider : ITCPListenerProvider
 {
     private readonly IConfiguration _configuration;
 

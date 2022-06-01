@@ -3,10 +3,10 @@ using TCPChatServer.Core.Models;
 
 namespace TCPChatServer.Core.Events;
 
-public class TcpClientEventArgs : EventArgs
+public class ClientEventArgs : EventArgs
 {
     public TcpClient TcpClient { get; }
-    public TcpClientEventArgs(TcpClient tcpClient)
+    public ClientEventArgs(TcpClient tcpClient)
     {
         TcpClient = tcpClient;
     }

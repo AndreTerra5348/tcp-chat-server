@@ -4,6 +4,6 @@ namespace TCPChatServer.Core.Services;
 
 public interface IConnectionService
 {
-    EventHandler<TcpClientEventArgs>? ClientConnected { get; set; }
+    EventHandler<ClientEventArgs>? ClientConnected { get; set; }
     void AwaitConnection(CancellationToken ct);
 }

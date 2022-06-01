@@ -5,46 +5,59 @@
 ![](https://github.com/AndreTerra5348/tcp-chat-server/actions/workflows/ci.yml/badge.svg)
 
 ## Introduction
-A Worker-Service TCP chat server written with .Net 6.0, using mvc approach, sockets, dependency injection, Serilog and FluentValidation
+A Worker-Service TCP chat server written in C# with .Net 6.0, using mvc approach, sockets, dependency injection, Serilog and FluentValidation
 
 ## Project Breakdown:
 - ### Core
-    - Interfaces
     - Models
     - Events
-    - Provides
-    - Repositories
-    - Services
+    - Provides Interfaces
+    - Repositories Interfaces
+    - Services Interfaces
 
 - ### Core.Command
-    - Interfaces
     - Models
     - Attributes
-    - Factories
-    - Parsers
-    - Resolvers
-    - Services
+    - Factories Interfaces
+    - Parsers Interfaces
+    - Resolvers Interfaces
+    - Services Interfaces
 
 - ### Data Layer
-    - Implementations
-    - Repositories
-    - Unit of Work
+    - Repositories Implementations
+    - Unit of Work Implementations
 
 - ### Service Layer
-    - Implementations
-    - Services
+    - Services Implementations
 
 - ### API
-    - Implementations
     - Controllers
     - Providers
     - Validators
     - Entry Point
 
+### Projects Dependency Diagram
+<img src="docs\diagrams-img\project-dependency.svg" alt="project-dependency" width="80%">
+
+### Core Project Diagram
+<img src="docs\diagrams-img\core-project.svg" alt="core-project" width="80%">
+
+### Data Project Diagram
+<img src="docs\diagrams-img\data-project.svg" alt="data-project" width="80%">
+
+
 ## TODO
 - [ ] Add unit tests
-- [ ] Add CI
+- [x] Add CI
 - [ ] Add more commands
+- [ ] Add Diagrams
+    - [x] Project Dependency Diagram
+    - [x] Core Project Diagram
+    - [ ] Command.Core Project Diagram
+    - [ ] Command Project Diagram
+    - [x] Data Project Diagram
+    - [ ] Service Project Diagram
+    - [ ] API Project Diagram
 
 
 ## Built with
