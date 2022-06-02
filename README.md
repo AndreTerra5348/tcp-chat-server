@@ -54,6 +54,9 @@ A Worker-Service TCP chat server written in C# with .Net 6.0, using mvc approach
 ### Data Project Diagram
 <img src="docs\diagrams-img\data-project.svg" alt="data-project" width="100%">
 
+### API Project Diagram
+<img src="docs\diagrams-img\api-project.svg" alt="api-project" width="100%">
+
 
 ## TODO
 - [ ] Add unit tests
