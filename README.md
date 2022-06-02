@@ -40,23 +40,23 @@ A Worker-Service TCP chat server written in C# with .Net 6.0, using mvc approach
 ### Projects Dependency
 <img src="docs\diagrams\project-dependency.svg" alt="project-dependency" width="100%">
 
-### Core Project
-<img src="docs\diagrams\core-project.svg" alt="core-project" width="100%">
+### Core
+<img src="docs\diagrams\core-project.svg" alt="core" width="100%">
 
-### Core.Command Project
-<img src="docs\diagrams\core.command-project.svg" alt="core.command-project" width="100%">
+### Core.Command
+<img src="docs\diagrams\core.command-project.svg" alt="core.command" width="100%">
 
-### Command Project
-<img src="docs\diagrams\command-project.svg" alt="command-project" width="100%">
+### Command
+<img src="docs\diagrams\command-project.svg" alt="command" width="100%">
 
-### Service Project
-<img src="docs\diagrams\service-project.svg" alt="service-project" width="100%">
+### Service
+<img src="docs\diagrams\service-project.svg" alt="service" width="100%">
 
-### Data Project
-<img src="docs\diagrams\data-project.svg" alt="data-project" width="100%">
+### Data
+<img src="docs\diagrams\data-project.svg" alt="data" width="100%">
 
-### API Project
-<img src="docs\diagrams\api-project.svg" alt="api-project" width="100%">
+### API
+<img src="docs\diagrams\api-project.svg" alt="api" width="100%">
 
 
 ## TODO
