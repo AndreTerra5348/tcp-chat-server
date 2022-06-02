@@ -75,9 +75,11 @@ A Worker-Service TCP chat server written in C# with .Net 6.0, using mvc approach
 
 ## Built with
 - .Net 6.0
-- Dependency Injection
-- Serilog
-- FluentValidation
+- Sockets
+- [Microsoft.Extensions.Hosting](https://docs.microsoft.com/en-us/dotnet/core/extensions/generic-host)
+- [Microsoft.Extensions.DependencyInjection](https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection)
+- [Serilog](https://serilog.net/)
+- [FluentValidation](https://fluentvalidation.net/)
 
 ## Getting Started
 
