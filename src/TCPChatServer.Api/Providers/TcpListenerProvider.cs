@@ -4,11 +4,11 @@ using TCPChatServer.Core.Providers;
 
 namespace TCPChatServer.Api.Providers;
 
-public class TcpListenerProvider : ITCPListenerProvider
+public class TCPListenerProvider : ITCPListenerProvider
 {
     private readonly IConfiguration _configuration;
 
-    public TcpListenerProvider(IConfiguration configuration)
+    public TCPListenerProvider(IConfiguration configuration)
     {
         _configuration = configuration;
     }

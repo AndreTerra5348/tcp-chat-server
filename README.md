@@ -42,6 +42,15 @@ A Worker-Service TCP chat server written in C# with .Net 6.0, using mvc approach
 ### Core Project Diagram
 <img src="docs\diagrams-img\core-project.svg" alt="core-project" width="100%">
 
+### Core.Command Project Diagram
+<img src="docs\diagrams-img\core.command-project.svg" alt="core.command-project" width="100%">
+
+### Command Project Diagram
+<img src="docs\diagrams-img\command-project.svg" alt="command-project" width="100%">
+
+### Service Project Diagram
+<img src="docs\diagrams-img\service-project.svg" alt="service-project" width="100%">
+
 ### Data Project Diagram
 <img src="docs\diagrams-img\data-project.svg" alt="data-project" width="100%">
 
@@ -53,10 +62,10 @@ A Worker-Service TCP chat server written in C# with .Net 6.0, using mvc approach
 - [ ] Add Diagrams
     - [x] Project Dependency Diagram
     - [x] Core Project Diagram
-    - [ ] Command.Core Project Diagram
-    - [ ] Command Project Diagram
+    - [x] Command.Core Project Diagram
+    - [x] Command Project Diagram
     - [x] Data Project Diagram
-    - [ ] Service Project Diagram
+    - [x] Service Project Diagram
     - [ ] API Project Diagram
 
 

@@ -1,6 +1,5 @@
 using System.Net.Sockets;
 using TCPChatServer.Core.Events;
-using TCPChatServer.Core.Models;
 
 namespace TCPChatServer.Core.Services;
 
