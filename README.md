@@ -36,40 +36,41 @@ A Worker-Service TCP chat server written in C# with .Net 6.0, using mvc approach
     - Validators
     - Entry Point
 
-### Projects Dependency Diagram
-<img src="docs\diagrams-img\project-dependency.svg" alt="project-dependency" width="100%">
+## Diagrams
+### Projects Dependency
+<img src="docs\diagrams\project-dependency.svg" alt="project-dependency" width="100%">
 
-### Core Project Diagram
-<img src="docs\diagrams-img\core-project.svg" alt="core-project" width="100%">
+### Core Project
+<img src="docs\diagrams\core-project.svg" alt="core-project" width="100%">
 
-### Core.Command Project Diagram
-<img src="docs\diagrams-img\core.command-project.svg" alt="core.command-project" width="100%">
+### Core.Command Project
+<img src="docs\diagrams\core.command-project.svg" alt="core.command-project" width="100%">
 
-### Command Project Diagram
-<img src="docs\diagrams-img\command-project.svg" alt="command-project" width="100%">
+### Command Project
+<img src="docs\diagrams\command-project.svg" alt="command-project" width="100%">
 
-### Service Project Diagram
-<img src="docs\diagrams-img\service-project.svg" alt="service-project" width="100%">
+### Service Project
+<img src="docs\diagrams\service-project.svg" alt="service-project" width="100%">
 
-### Data Project Diagram
-<img src="docs\diagrams-img\data-project.svg" alt="data-project" width="100%">
+### Data Project
+<img src="docs\diagrams\data-project.svg" alt="data-project" width="100%">
 
-### API Project Diagram
-<img src="docs\diagrams-img\api-project.svg" alt="api-project" width="100%">
+### API Project
+<img src="docs\diagrams\api-project.svg" alt="api-project" width="100%">
 
 
 ## TODO
 - [ ] Add unit tests
 - [x] Add CI
 - [ ] Add more commands
-- [ ] Add Diagrams
+- [x] Add Diagrams
     - [x] Project Dependency Diagram
     - [x] Core Project Diagram
     - [x] Command.Core Project Diagram
     - [x] Command Project Diagram
     - [x] Data Project Diagram
     - [x] Service Project Diagram
-    - [ ] API Project Diagram
+    - [x] API Project Diagram
 
 
 ## Built with
