@@ -22,7 +22,7 @@ public class ConnectionService : IConnectionService
     }
 
 
-    public void AwaitConnection(CancellationToken ct)
+    public void Listen(CancellationToken ct)
     {
         using (ct.Register(() => _listener.Stop()))
         {
@@ -41,6 +41,21 @@ public class ConnectionService : IConnectionService
                 throw new OperationCanceledException(ct);
             }
         }
+    }
 
+    public async Task<TcpClient> ListenAsync(CancellationToken ct)
+    {
+        using (ct.Register(() => _listener.Stop()))
+        {
+            try
+            {
+                _logger.LogInformation("Waiting for connection");
+                return await _listener.AcceptTcpClientAsync();
+            }
+            catch (SocketException ex) when (ex.SocketErrorCode == SocketError.Interrupted)
+            {
+                throw new OperationCanceledException(ct);
+            }
+        }
     }
 }

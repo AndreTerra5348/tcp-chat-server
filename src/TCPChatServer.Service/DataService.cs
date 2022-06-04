@@ -40,6 +40,7 @@ public class DataService : IDataService
     {
         var stream = tcpClient.GetStream();
         var buffer = new byte[1024];
+
         while (true)
         {
             var length = stream.Read(buffer, 0, buffer.Length);
@@ -55,5 +56,22 @@ public class DataService : IDataService
                 handler(this, new ReceivedDataEventArgs(new ReceivedData(clientId, data)));
             }
         }
+    }
+
+    public async Task<ReceivedData> ReceiveAsync(Guid clientId, TcpClient tcpClient)
+    {
+        var stream = tcpClient.GetStream();
+        var buffer = new byte[1024];
+        var length = 0;
+        using var ms = new MemoryStream();
+        while ((length = await stream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+        {
+            ms.Write(buffer, 0, length);
+        }
+
+        var data = Encoding.UTF8.GetString(ms.ToArray());
+
+        return new ReceivedData(clientId, data);
+
     }
 }

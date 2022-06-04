@@ -21,11 +21,11 @@ public class ClientController
         _dataService = dataService;
         _clientService = clientService;
         _userService = userService;
-        connectionService.ClientConnected += (s, e) => ConnectionService_ClientConnected(e.TcpClient);
+        connectionService.ClientConnected += (s, e) => ClientConnected(e.TcpClient);
         _logger = logger;
     }
 
-    public void ConnectionService_ClientConnected(TcpClient tcpClient)
+    public void ClientConnected(TcpClient tcpClient)
     {
         _logger.LogInformation("Client connected");
         var client = new Client(tcpClient, Guid.NewGuid());

@@ -25,7 +25,7 @@ public class EntryPoint : BackgroundService
 
         while (!stoppingToken.IsCancellationRequested)
         {
-            await Task.Run(() => _connectionService.AwaitConnection(stoppingToken));
+            await Task.Run(() => _connectionService.Listen(stoppingToken));
         }
     }
 }
