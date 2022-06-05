@@ -1,4 +1,5 @@
 using TCPChatServer.Core;
+using TCPChatServer.Core.Events;
 using TCPChatServer.Core.Models;
 using TCPChatServer.Core.Services;
 

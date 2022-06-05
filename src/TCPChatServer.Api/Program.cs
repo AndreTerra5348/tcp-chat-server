@@ -17,7 +17,8 @@ using TCPChatServer.Core.Services;
 using TCPChatServer.Data;
 using TCPChatServer.Service;
 using Serilog;
-
+using TCPChatServer.Core.Handlers;
+using TCPChatServer.Api.Handlers;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -55,6 +56,10 @@ try
         services.AddScoped<ClientController>();
         services.AddScoped<ReceivedDataController>();
         services.AddScoped<CommandController>();
+        services.AddScoped<UserController>();
+
+        services.AddScoped<IConnectionHandler, ConnectionHandler>();
+        services.AddScoped<IClientHandler, ClientHandler>();
 
         services.AddTransient<ICommand, NameCommand>();
         services.AddTransient<ICommand, BroadcastCommand>();

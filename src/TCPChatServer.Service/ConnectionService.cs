@@ -11,36 +11,12 @@ public class ConnectionService : IConnectionService
     private readonly TcpListener _listener;
     private readonly ILogger<ConnectionService> _logger;
 
-    public EventHandler<ClientEventArgs>? ClientConnected { get; set; }
-
     public ConnectionService(ITCPListenerProvider tcpListenerProvider, ILogger<ConnectionService> logger)
     {
         _listener = tcpListenerProvider.CreateTcpListener();
         _listener.Start();
         _logger = logger;
         _logger.LogInformation("Server started");
-    }
-
-
-    public void Listen(CancellationToken ct)
-    {
-        using (ct.Register(() => _listener.Stop()))
-        {
-            try
-            {
-                _logger.LogInformation("Waiting for connection");
-                var tcpClient = _listener.AcceptTcpClient();
-                var handler = ClientConnected;
-                if (handler != null)
-                {
-                    handler(this, new ClientEventArgs(tcpClient));
-                }
-            }
-            catch (SocketException ex) when (ex.SocketErrorCode == SocketError.Interrupted)
-            {
-                throw new OperationCanceledException(ct);
-            }
-        }
     }
 
     public async Task<TcpClient> ListenAsync(CancellationToken ct)
@@ -50,7 +26,7 @@ public class ConnectionService : IConnectionService
             try
             {
                 _logger.LogInformation("Waiting for connection");
-                return await _listener.AcceptTcpClientAsync();
+                return await _listener.AcceptTcpClientAsync(ct);
             }
             catch (SocketException ex) when (ex.SocketErrorCode == SocketError.Interrupted)
             {

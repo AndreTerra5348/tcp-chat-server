@@ -4,8 +4,6 @@ using TCPChatServer.Core.Models;
 namespace TCPChatServer.Core.Command.Services;
 public interface ICommandService
 {
-    EventHandler<ReceivedDataEventArgs>? Received { get; set; }
-    void Receive(ReceivedData data);
     string ParseCommand(string command);
     IEnumerable<string> ParseParameters(string message);
     bool Has(string command);

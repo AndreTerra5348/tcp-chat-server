@@ -17,11 +17,9 @@ public class CommandController
         _dataService = dataService;
         _commandService = commandService;
         _logger = logger;
-
-        _commandService.Received += (s, e) => CommandService_Received(e.Data);
     }
 
-    private void CommandService_Received(ReceivedData data)
+    public void Execute(ReceivedData data)
     {
         var command = _commandService.ParseCommand(data.Content);
         _logger.LogInformation($"Received command: {command} from {data.SenderId}");

@@ -14,8 +14,6 @@ public class CommandService : ICommandService
     private readonly ICommandResolver _commandResolver;
     private readonly ICommandValidatorFactory _commandValidatorFactory;
 
-    public EventHandler<ReceivedDataEventArgs>? Received { get; set; }
-
 
     public CommandService(ICommandParser commandParser,
         ICommandResolver commandResolver,
@@ -49,15 +47,4 @@ public class CommandService : ICommandService
     {
         return _commandResolver.Resolve(command);
     }
-
-    public void Receive(ReceivedData data)
-    {
-        var handler = Received;
-        if (handler != null)
-        {
-            handler(this, new ReceivedDataEventArgs(data));
-        }
-    }
-
-
 }

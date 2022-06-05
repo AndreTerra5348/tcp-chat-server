@@ -5,10 +5,10 @@ namespace TCPChatServer.Core.Events;
 
 public class ClientEventArgs : EventArgs
 {
-    public TcpClient TcpClient { get; }
-    public ClientEventArgs(TcpClient tcpClient)
+    public Client Client { get; }
+    public ClientEventArgs(Client client)
     {
-        TcpClient = tcpClient;
+        Client = client;
     }
 
 }
