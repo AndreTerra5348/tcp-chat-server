@@ -61,6 +61,10 @@ A Worker-Service TCP chat server written in C# with .Net 6.0, using mvc approach
 
 ## TODO
 - [ ] Add unit tests
+    - [ ] Services
+    - [ ] Data
+    - [ ] Command
+    - [ ] API
 - [x] Add CI
 - [ ] Add more commands
 - [x] Add Diagrams
